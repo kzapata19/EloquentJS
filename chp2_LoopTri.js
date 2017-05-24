@@ -31,7 +31,7 @@ forLoopNum();
 
 var forLoopAmp = function () {
 	var pyramid = "";
-	for (var i = " "; i.length <= pyrLevels; i += " ") { // must use "<=" because i = " "
+	for (var i = " "; i.length <= pyrLevels; i+= " ") { // must use "<=" because i = " "
 		pyramid += "o";
 		console.log(pyramid);
 	}
