@@ -29,6 +29,3 @@ var fizzBuzz = function (num) {
 	}
 	console.log(result || i);
 }
-fizzBuzz(2);
-
-fizzBuzz(20);
