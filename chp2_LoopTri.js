@@ -20,7 +20,7 @@ for, while, and do loops do not have local scopes like functions do
 
 var forLoopNum = function () {
 	var pyramid = "";
-	for(var i = 0; i < pyrLevels; i ++){
+	for(var i = 0; i < pyrLevels; i++){
 		pyramid += "#";
 		console.log(pyramid);
 	}
