@@ -17,9 +17,9 @@
 // }
 // fizzBuzz(20);
 
-var fizzBuzz = function (num) {
-	var result = " ";
-	for (var i = 1; i <= num; i++) {
+function fizzBuzz (num) {
+	let result = " ";
+	for (let i = 1; i <= num; i++) {
 		if(i % 3 === 0) {
 			result += "Fizz";
 		}
