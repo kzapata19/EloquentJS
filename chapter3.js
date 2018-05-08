@@ -2,10 +2,10 @@
 
 // Alternative function to zeroPad and printFarmInventory
 
-var farmInv = function(animalArray, padding) {
+let farmInv = (animalArray, padding) => {
   animalArray.forEach(function(animalObj) {
-    var animalObjString = String(animalObj["num"]);
-    if(animalObjString.length < padding) { animalObjString = "0" + animalObjString; 
+    let animalObjString = String(animalObj["num"]);
+    if(animalObjString.length < padding) { animalObjString = "0" + animalObjString;
      console.log(animalObjString + " " + animalObj["name"]);}
    })
 }
@@ -13,9 +13,7 @@ var farmInv = function(animalArray, padding) {
 /***MINIMUM***/
 /* Write a function min that takes two arguments and returns their minimum. */
 
-var min = function(arg1, arg2) {
-  return arg1 <= arg2 ? arg1 : arg2;
-};
+let min = (arg1, arg2) => arg1 <= arg2 ? arg1 : arg2;
 
 /***RECURSION***/
 
@@ -31,10 +29,10 @@ Define a recursive function isEven corresponding to this description. The functi
 
 Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this? */
 
-function isEven (num) {
+let isEven = num => {
   if (num === 0) { return true;}
   else if(num === 1) { return false;}
-  else if (num < 0) { return isEven(num * -1);} // or  return isEven(num + 2) 
+  else if (num < 0) { return isEven(num * -1);} // or  return isEven(num + 2)
   else { return isEven(num - 2);}
 }
 
@@ -46,18 +44,15 @@ Write a function countBs that takes a string as its only argument and returns a 
 
 Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function. */
 
-var countBs = function (string) {
-	var count = 0;
-	[].forEach.call(string, function(letter) {
-		if(letter === "B") { count++;}
-    });
-  	return count;
+let countBs = string => {
+	let count = 0;
+	[].forEach.call(string, letter => { if(letter === "B") count++;});
+  return count;
 }
 
-var countChar = function (string, char) {
-  return [].reduce.call(string, function(count, currentChar) {
-    if(currentChar === char) { count++;}
-    return count;
+let countChar = (string, char) => {
+  return [].reduce.call(string, (count, currentChar) => {
+    if(currentChar === char) count++;
+      return count;
   }, 0);
 }
-
